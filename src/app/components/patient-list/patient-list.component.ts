@@ -11,14 +11,14 @@ import { CanDeactivateGuard } from '../../can-deactivate-guard.service';
 })
 export class PatientListComponent implements OnInit, CanDeactivateGuard {
 
-  private patients: Patient[] = [];
+  public patients: Patient[] = [];
 
-  private deleteCache: Patient[] = [];
-  private isUndoActive: boolean = false;
-  private undoTimer = null;
+  public deleteCache: Patient[] = [];
+  public isUndoActive: boolean = false;
+  public undoTimer = null;
 
-  private isAsc: boolean = true;
-  private sortProperty: string = 'patientId';
+  public isAsc: boolean = true;
+  public sortProperty: string = 'patientId';
 
   constructor(private patientService: PatientService, private flashMessageService: FlashMessagesService) { }
 

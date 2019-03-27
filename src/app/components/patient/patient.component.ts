@@ -10,7 +10,7 @@ import { Patient } from '../../models/patient.model';
 })
 export class PatientComponent implements OnInit {
 
-  private patient: Patient = null;
+  public patient: Patient = null;
   private patientID: number;
 
   constructor(private patientService:PatientService,private route:ActivatedRoute, private router: Router) { }
